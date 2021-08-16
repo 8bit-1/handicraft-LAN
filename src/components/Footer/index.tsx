@@ -1,25 +1,9 @@
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 import { withTranslation } from 'react-i18next';
 import { SvgIcon } from '../../common/SvgIcon';
 import Container from '../../common/Container';
 
-import i18n from 'i18next';
-import {
-  FooterSection,
-  Title,
-  NavLink,
-  Extra,
-  LogoContainer,
-  Para,
-  Large,
-  Chat,
-  Empty,
-  FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
-} from './styles';
+import { NavLink, Extra, LogoContainer, FooterContainer } from './styles';
 
 interface SocialLinkProps {
   href: string;
@@ -27,9 +11,9 @@ interface SocialLinkProps {
 }
 
 const Footer = ({ t }: any) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  // const handleChange = (language: string) => {
+  //   i18n.changeLanguage(language);
+  // };
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
