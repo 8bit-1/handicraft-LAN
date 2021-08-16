@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Acerca de Nosotros",
+  "text": "Somos un grupo de estudiantes de la facultad de ingenieria de la UNAH haciendo realidad nuestras ideas.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "¿Porque HandiCraft?",
+      "content": "Queremos impulsar el comercio local y pequeños empresarios que crean sus productos hechos a mano.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "¿Porque usar HandiCraft?",
+      "content": "Si bien existen otras plataformas para mostrar productos en venta, en estas hay gran variedad de productos, nosotros permitiremos solo productos manufacturados a mano, respetando este nicho de mercado.",
       "icon": "notes.svg"
     }
   ]
