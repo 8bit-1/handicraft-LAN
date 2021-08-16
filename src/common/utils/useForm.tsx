@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { notification } from "antd";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import { notification } from 'antd';
+import axios from 'axios';
 
 export const useForm = (validate: any) => {
   const [values, setValues] = useState({});
@@ -8,9 +8,9 @@ export const useForm = (validate: any) => {
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
   const openNotificationWithIcon = () => {
-    notification["success"]({
-      message: "Success",
-      description: "Your message has been sent!",
+    notification['success']({
+      message: 'Success',
+      description: 'Your message has been sent!',
     });
   };
 
@@ -18,7 +18,7 @@ export const useForm = (validate: any) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
-    const url = "";
+    const url = 'https://hechoencasa-backend.herokuapp.com/landing/client';
     if (Object.keys(values).length === 3) {
       axios
         .post(url, {
@@ -32,7 +32,7 @@ export const useForm = (validate: any) => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues("");
+      setValues('');
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);
@@ -43,7 +43,7 @@ export const useForm = (validate: any) => {
       ...values,
       [event.target.name]: event.target.value,
     }));
-    setErrors((errors) => ({ ...errors, [event.target.name]: "" }));
+    setErrors((errors) => ({ ...errors, [event.target.name]: '' }));
   };
 
   return {
