@@ -20,6 +20,7 @@ const Home = () => {
         type="right"
         title={IntroContent.title}
         content={IntroContent.text}
+        button={IntroContent.button}
         icon="Pantalla_de_inicio1.svg"
         id="intro"
       />

@@ -13,6 +13,13 @@ const RightBlock = ({ title, content, button, icon, t, id }: ContentBlockProps) 
       behavior: 'smooth',
     });
   };
+
+  const selectBehavior = (type: string) => {
+    if (type === 'link') {
+    } else {
+    }
+  };
+
   return (
     <RightBlockContainer>
       <Fade direction="right">
@@ -24,11 +31,25 @@ const RightBlock = ({ title, content, button, icon, t, id }: ContentBlockProps) 
               <ButtonWrapper>
                 {typeof button === 'object' &&
                   button.map((item: any, id: number) => {
-                    return (
-                      <Button key={id} color={item.color} fixedWidth={true} onClick={() => scrollTo('about')}>
-                        {t(item.title)}
-                      </Button>
-                    );
+                    if (item.type === 'link') {
+                      return (
+                        <Button key={id} color={'white'} fixedWidth={true}>
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://drive.google.com/file/d/1BM7emXn0QZ15KMus4LgfTtrqReMzBlxg/view?usp=drivesdk"
+                          >
+                            {t(item.title)}
+                          </a>
+                        </Button>
+                      );
+                    } else {
+                      return (
+                        <Button key={id} color={item.color} fixedWidth={true} onClick={() => scrollTo('about')}>
+                          {t(item.title)}
+                        </Button>
+                      );
+                    }
                   })}
               </ButtonWrapper>
             </ContentWrapper>

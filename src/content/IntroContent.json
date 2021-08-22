@@ -3,11 +3,8 @@
   "text": "Si quieres promocionar tu producto, somos tu mejor opcion.",
   "button": [
     {
-      "title": "Explore"
-    },
-    {
-      "title": "Learn more",
-      "color": "#fff"
+      "title": "Descarga nuestra app",
+      "type": "link"
     }
   ]
 }
